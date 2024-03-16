@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        #scrolldiv {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<a style="
+    display: block;
+    background: #98a3ff;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25px;
+    margin: 0 auto;
+    margin-top: 0px;
+    border-radius: 32px;
+    width: 90%;
+" onclick="javascript:document.querySelector('.web_notice').remove()">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="referrer" content="never">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Lucky在线随机观看小姐姐黑丝">
+    <meta name="keywords" content="Lucky,随机小姐姐,Luckyapi">
+    <title>随机小姐姐黑丝</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <section id="main">
+        <img id="player" src="static/picture/hs.php" controls="" webkit-playsinline="" playsinline="">
+    </section>
+    <section id="buttons">
+
+           <button id="next"><a href="" class="txt2">下一个</a></button>
+    </section>
+
+    <script>
+        (function(window, document) {
+            if (top != self) {
+                window.top.location.replace(self.location.href);
+            }
+            var get = function(id) {
+                return document.getElementById(id);
+            }
+            var bind = function(element, event, callback) {
+                return element.addEventListener(event, callback);
+            }
+            var auto = true;
+            var player = get('player');
+            var randomm = function() {
+                player.src = 'https://www.iospro.cn/hs/hs.php' + Math.random();
+                player.play();
+            }
+            bind(get('next'), 'click', randomm);
+            bind(player, 'error', function() {
+                randomm();
+            });
+            bind(get('switch'), 'click', function() {
+                auto = !auto;
+                this.innerText = '自动播放' + (auto ? '开' : '关');
+            });
+            bind(player, 'ended', function() {
+                if (auto) randomm();
+            });
+        })(window, document);
+    </script>
+</a></body></html>
