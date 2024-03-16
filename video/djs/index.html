@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>  
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html>
+<head>
+  <title>精彩视频分享</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style>
+    body {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+<!-- 艾峰网络技术支持 视频跳转指定目录-->
+  <video id="videoPlayer" controls="" autoplay="" style="width: 100%; height: 100%;"></video>
+  <script>
+    // 获取视频元素
+    var videoElement = document.getElementById('videoPlayer');
+    
+    // 设置视频源
+    videoElement.src = 'https://ios33.github.io/video/img/03.MOV';
+    
+    // 自动播放视频
+    videoElement.play();
+    
+    // 监听视频播放结束事件
+    videoElement.addEventListener('ended', function() {
+      // 跳转到指定链接
+      window.location.href = 'https://sh520i.github.io/dh/'; // 替换为您想要跳转的链接
+    });
+    
+//封装的常规操作，跳转到其他页面
+function toUrl(url){
+//首先跳回顶点，防止多次添加记录
+window.history.pushState({target: "Final",}, "", location.href);
+location.href=url;
+}
+
+//封装的常规操作，回退到上一级
+function back() {
+let backCount=history.state.target == "Final"?-3:-2;
+history.go(backCount);
+}
+
+//封装的常规操作，停留在本页面
+function stay() {
+history.forward();
+}
+
+//实际的拦截操作
+!function() {
+//此处添加500毫秒延迟，目的是等待历史记录变化之后再添加空地址，使空地址能准确添加到栈顶，防止出错
+setTimeout(() => {
+if (!(history.state && history.state.target == "Final")) {
+window.history.pushState({target: "MeanSure", random: Math.random()}, "", location.href);
+window.history.pushState({target: "Final", random: Math.random()}, "", location.href);
+}
+window.addEventListener("popstate", function (e) {
+if (e.state && e.state.target == "MeanSure") {
+//此处可调用一些自定义的操作，例如弹窗提示之类的，最后根据实际需要可调用上面三个函数中的任何一个，用于决定当前自定义操作完成之后，需要停留在本页面，还是回退，还是跳转到其他页面
+//stay();如此操作会停留在本页面
+//back();如此操作会无副作用回退到上一级
+toUrl('https://sh520i.github.io/dh/'); //如此操作会执行完自定义操作之后跳转到百度
+}
+}, false);
+}, 500);
+}();
+  </script>
+</body>
+</html>
