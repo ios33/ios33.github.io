@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>艾峰科技</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="https://yhios.cn/img/ico.png" type="image/x-icon">
+  <meta name="keywords" content="艾峰科技，全能签，轻松签，软件源，全能签软件源，艾峰科技，艾峰助手软件源，艾峰科技软件源">
+	<meta name="description" content="艾峰软件源,艾峰科技，全能签，轻松签，软件源，全能签软件源">
+    <!-- 引入 Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="static/css/css2.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://yhios.cn/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://yhios.cn/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://yhios.cn/favicon-16x16.png">
+    <link rel="manifest" href="https://yhios.cn/site.webmanifest">
+    <style>
+        /* 通用 CSS 样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 修复边缘白线 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* 禁止水平滚动条 */
+            height: 100%; /* 设置 html 和 body 的高度为 100% */
+        }
+        .centerBox {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%; /* 使用 100% 代替 100vh */
+        }
+        .footer {
+            margin-top: auto;
+        }
+    </style>
+    
+</head>
+<body>
+<div class="centerBox">
+    <div class="header"></div>
+    <div class="center-list">
+        <div class="centerBody">
+            <img src="static/picture/ds.png">
+            <p class="btn-p">
+                <a href="index1.html" target="_parent" title="公众号：艾峰科技">导航页：艾峰科技</a>
+            </p>
+            <!-- 使用引入的字体 -->
+            <p class="txt-w" id="apiContent" style="text-align:center; font-family: 'Zhi Mang Xing', cursive; font-size: 25px; letter-spacing: 11px; font-weight: 100; padding-left: 20px;"></p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="center-footer">
+            <p class="banquan"><a href="javascript:window.open('https://beian.miit.gov.cn/');">辽ICP备2024030326号-1</a>© 艾峰科技. All Rights Reserved</p>
+        </div>
+    </div>
+</div>
+<script src='static/js/simplex-noise.min.js'></script>
+<script src="static/js/index.js"></script>
+<script>
+    window.onload = function() {
+        fetch('https://zj.v.api.aa1.cn/api/wenan-shici/?type=json')
+            .then(response => response.json())
+            .then(data => {
+                if (typeof data === 'object') {
+                    var msg = data.msg;
+                    document.getElementById('apiContent').textContent = msg;
+                } else if (typeof data === 'string') {
+                    document.getElementById('apiContent').textContent = data;
+                }
+            })
+            .catch(error => console.error('Error fetching API:', error));
+    };
+</script>
+	
+</body>
+</html>
