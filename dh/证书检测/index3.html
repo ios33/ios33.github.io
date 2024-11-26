@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+<head>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+
+<title>全能签/轻松签-P12证书签名</title>
+<!-- 引入 SweetAlert 的 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+<!-- 引入 SweetAlert 的 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<meta name="description" content="全能签·苹果P12证书定制，支持一键安装《全能签》等主流IPA签名工具，一款网页端ipa在线签名工具，支持一键签署APP多开,在线安装等">
+<meta name="keywords" content="全能签,全能签官网,iOS全能签,全能签兑换码,全能签签名码,全能签证书,万能签,万能签官网,iOS端IPA签名工具,P12证书兑换码,喵喵签证书,IOS证书,苹果个人开发者证书,个人P12证书,魔力签,GBOX,个人P12证书">
+<style type="text/css">@media print{
+BODY {display:none}
+}
+/*背景颜色样式*/
+body{
+	margin:0px;
+	padding:0px;
+	font-family:Arial;
+	border:0px;
+	z-index:1;
+	background-color: #B0C4DE;
+	}
+
+.All{
+	width: 100%;
+	height: auto;
+	display: block;
+	max-width: 800px;
+	margin-top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+/*说明框颜色等样式元素*/
+.AllText{
+	width: auto;
+	height: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #4682B4;
+	border-radius: 20px;
+	padding: 0.5px;
+	}
+
+.Subject{
+	font-size: 18px;
+	color: #f1f1f1;
+	font-weight: 900;
+	display: block;
+	margin-top: 0px;
+	}
+
+.Info{
+		font-size: 13px;
+		color: #f1f1f1;
+		line-height: 20px;
+		display: block;
+		margin-top: 5px;
+		font-weight: normal;
+	}
+
+.Logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+	height: auto;
+	border-radius: 10px;
+	}
+
+.Pay{
+	text-decoration:none;
+	width:90%;
+	background-color:#4682B4;
+	color:#f1f1f1;
+	text-align:center;
+	height:40px;
+	display:block;
+	line-height:40px;
+	font-size:13px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	}
+.P12-dh{
+	text-decoration:none;
+	width:90%;
+	background-color:#0000FF;
+	color:#f1f1f1;
+	text-align:center;
+	height:40px;
+	display:block;
+	line-height:40px;
+	font-size:13px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:10px;
+	}
+.qnq{
+	text-decoration:none;
+	width:90%;
+	background-color:#DC143C;
+	color:#f1f1f1;
+	text-align:center;
+	height:40px;
+	display:block;
+	line-height:40px;
+	font-size:13px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+	}
+.cx{
+	text-decoration:none;
+	width:90%;
+	background-color:#70b800;
+	color:#f1f1f1;
+	text-align:center;
+	height:40px;
+	display:block;
+	line-height:40px;
+	font-size:13px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15px;
+	}
+.gw{
+	text-decoration:none;
+	width:90%;
+	background-color:yellow;
+	color:#f1f1f1;
+	text-align:center;
+	height:40px;
+	display:block;
+	line-height:40px;
+	font-size:13px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15px;
+	}
+.gg{
+	text-decoration:none;
+	width:30%;
+	background-color:yellow;
+	color:#f1f1f1;
+	text-align:center;
+	height:20px;
+	display:block;
+	line-height:20px;
+	font-size:10px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15px;
+	}
+.y{
+	text-decoration:none;
+	width:90%;
+	background-color:#8f04f9;
+	color:#f1f1f1;
+	text-align:center;
+	height:40px;
+	display:block;
+	line-height:40px;
+	font-size:13px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15px;
+	}
+	
+</style>
+
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false">
+<br>
+		<center><div class="All">
+		<div class="AllText">
+		    <img class="Logo" src="static/picture/P12.png" style="width: 20%;">
+			<a class="Subject">P12证书·兑换码</a>
+
+	
+			<center><p class="Info">
+	  <font color="#FFFF00">加强版和稳定版是嘎嘎稳定证书   </font><br>
+秒出 <font color="#FFFF00">稳定版：</font>质保 <font color="#33CCFF">330天</font>内掉签<font color="#33CCFF">不限次数</font>补签<br>
+秒出 <font color="#CCFFFF">加强版：</font>质保 <font color="#33CCFF">180天</font>内掉签<font color="#33CCFF">不限次数</font>补签<br>
+秒出 <font color="#CCFFFF">标准版：</font>质保 <font color="#33CCFF"> 40天 </font>内掉签<font color="#33CCFF">不限次数</font>补签<br>
+秒出 <font color="#CCCCCC">躺平版：</font>质保 <font color="#33CCFF">无售后</font>，如遇掉签需重购买<br>
+
+
+
+		    	<center><p class="Info">
+				 <font color="#FFFF00">预约审核慢出证书最快72小时出   </font>
+				
+				<br> <font color="#FFFF00">⚠ 掉过签的设备17-33天出 ⚠  </font>
+				<br>所有证书有效期理论都是330天以上
+				<br>⚠ 签名码使用后绑定设备UDID，无法更改退款 ⚠
+				<br> 支持：全能签、轻松签、万能签、魔力签、Gbox
+				
+				</p></center>
+		</p></center></div>
+  </div></center>
+
+  <script>
+function P12330()
+{
+alert("此【兑换码】项目包含内容如下：\n秒出P12证书*1\n证书330天内掉签免费补签不限次数\n如遇掉签联系客服QQ：3120615436进行补签\n售后无需输入签名码");
+}
+</script>
+
+<script>
+function P12180()
+{
+alert("此【兑换码】项目包含内容如下：\n秒出P12证书*1\n证书180天内掉签免费补签不限次数\n如遇掉签联系客服QQ：3120615436进行补签\n售后无需输入签名码");
+}
+</script>
+
+<script>
+function y1288()
+{
+alert("此【兑换码】项目包含内容如下：\n\n【秒出P12证书*1+小白软件源年会员】\n\n证书180天内掉签免费补签不限次数\n如遇掉签联系客服\nWX/QQ：3120615436进行补签\n售后无需输入签名码");
+}
+</script>
+
+<script>
+function y1588()
+{
+alert("此【兑换码】项目包含内容如下：\n\n【秒出P12证书*1+小白软件源年会员】\n\n证书330天内掉签免费补签不限次数\n如遇掉签联系客服\nWX/QQ：3120615436进行补签\n售后无需输入签名码");
+}
+</script>
+
+<script>
+function yrjy()
+{
+alert("此【兑换码】项目包含内容如下：\n小白软件源会员兑换码\n不包含P12证书\n如有疑问联系客服\nWX/QQ：3120615436\n");
+}
+</script>
+<!--30RMB-->
+<script>
+function P1240()
+{
+alert("此【兑换码】项目包含内容如下：\n秒出P12证书*1\n证书40天内掉签免费补签不限次数\n如遇掉签联系客服QQ：3120615436进行补签\n售后无需输入签名码");
+}
+</script>
+<!--20RMB-->
+<script>
+function P120()
+{
+alert("此【兑换码】项目包含内容如下：\n秒出P12证书*1\n证书无质保，有效期一年");
+}
+</script>
+
+<script>
+function y330()
+{
+alert("此【兑换码】项目包含内容如下：\n预出P12证书*1\n证书质保330天，有效期一年\n掉签提供1次秒补机会，以后补签为慢补");
+}
+</script>
+
+<script>
+function y180()
+{
+alert("此【兑换码】项目包含内容如下：\n预出P12证书*1\n证书质保180天，有效期一年\n掉签提供1次秒补机会，以后补签为慢补");
+}
+</script>
+
+<script>
+function y0()
+{
+alert("此【兑换码】项目包含内容如下：\n预出P12证书*1\n证书有效期一年，无售后");
+}
+</script>
+
+<script>
+function yshbzb()
+{
+alert("此【兑换码】项目包含内容如下：\n预出P12证书*1\n证书有效期一年，售后40天");
+}
+</script>
+
+<script>
+function anjc()
+{
+alert("温馨提示：\n请认真查看安装教程。");
+}
+</script>
+<script>
+function dhan()
+{
+alert("温馨提示：\n安装【自签APP】需要手动导入证书\n \n⚠⚠请一定要先看视频教程⚠⚠\n\n本站属于第三方证书，售后由本站提供！");
+}
+function WXZF()
+{
+alert("温馨提示：\n截图扫码添加QQ/VX客服购买\n感谢你的支持！");
+}
+</script>
+
+<script>
+function other()
+{
+alert("温馨提示：\n购买前请认真阅读商品说明！\n感谢你的光临！");
+}
+
+</script>
+<script>
+  Swal.fire({
+    title: '温馨提示',
+    icon: 'info',
+    html:
+      '<p>尊贵的用户您好<br>如平台无法付款<br>请联系在线客服</p>',
+    position: 'center', // 设置弹窗居中显示
+    showConfirmButton: true,
+    confirmButtonText: '联系客服',
+    allowOutsideClick: false,
+    showDenyButton: true,
+    denyButtonText: `我知道了`,
+  }).then((result) => {
+    if (!result.isDenied) {
+      window.location.href = 'https://afzs.yhios.cn/wxkf/index.html';
+    }
+  });
+</script>
+
+
+
+
+ <a class="gg"><font color="#FF3333">秒出证书-飞速出书</font></a>
+  <a class="Pay" onclick="P12330()" href="https://www.kajishou.com/details/8E143836"><font color="#FF3333">推荐</font>【秒出证书】<font color="#FFFF00">稳定版</font><font color="#66FFCC">【P12证书兑换码】</font>129.0¥</a>
+
+
+  <a class="Pay" onclick="P12180()" href="https://www.kajishou.com/details/730A0C35"><font color="#FF3333">推荐</font>【秒出证书】<font color="#CCFFFF">加强版</font><font color="#66FFCC">【P12证书兑换码】</font>99.0¥</a>
+
+  <a class="Pay" onclick="P1240()" href="https://www.kajishou.com/details/642A1DF1"><font color="#FF3333">热卖</font>【秒出证书】<font color="#CCFFFF">标准版</font><font color="#66FFCC">【P12证书兑换码】</font>68.8¥</a>
+
+  <a class="Pay" onclick="P120()" href="https://www.kajishou.com/details/081BD218"><font color="#FF3333">  </font>【秒出证书】<font color="#CCCCCC">躺平版</font><font color="#66FFCC">【P12证书兑换码】</font>48.8¥</a>
+ 
+  <a class="gg"><font color="#FF3333">秒出证书+会员权限</font></a>
+  
+    <a class="Pay" onclick="y1588()" href="https://www.kajishou.com/details/5DC7759C"><font color="#FF3333">推荐</font>【秒出证书】<font color="#FFFF00">稳定版</font><font color="#66FFCC">+【年会员权限】</font>158.8¥</a>
+  
+  <a class="Pay" onclick="y1288()" href="https://www.kajishou.com/details/BE397BB5"><font color="#FF3333">推荐</font>【秒出证书】<font color="#FFFF00">加强版</font><font color="#66FFCC">+【年会员权限】</font>120.0¥</a>
+  
+  <a class="Pay" onclick="yrjy()" href="https://www.kajishou.com/liebiao/FBC538E42748D8F8"><font color="#FF3333"></font>【会员权限】<font color="#FFFF00">软件源</font><font color="#66FFCC">-【年费/季度/单月】</font>8.0¥ 起</a>
+ 
+  <a class="gg"><font color="#FF3333">慢出证书-预约审核</font></a>
+
+  <a class="Pay" onclick="y330()" href="https://www.kajishou.com/details/A08F1ACF"><font color="#FF3333">推荐</font>【慢出证书】<font color="#FFFF00">稳定版</font><font color="#66FFCC">【P12证书兑换码】</font>89.8¥</a>
+ 
+  <a class="Pay" onclick="y180()" href="https://www.kajishou.com/details/6B2F5CFA"><font color="#FF3333"></font>【慢出证书】<font color="#CCFFFF">加强版</font><font color="#66FFCC">【P12证书兑换码】</font>68.8¥</a>
+  
+  <a class="Pay" onclick="yshbzb()" href="https://www.kajishou.com/details/98BBABA6"><font color="#FF3333"></font>【慢出证书】<font color="#CCCCCC">标准版</font><font color="#66FFCC">【P12证书兑换码】</font>39.9¥</a>
+  
+  <a class="Pay" onclick="y0()" href="https://www.kajishou.com/details/86E1E954"><font color="#FF3333"></font>【慢出证书】<font color="#CCCCCC">躺平版</font><font color="#66FFCC">【P12证书兑换码】</font>28.8¥</a>
+
+  <a class="gg"><font color="#FF3333">人工免手续费</font></a>
+  
+  <a class="Pay" onclick="WXZF()" href="index2.html">添加<font color="#CCCCCC">QQ/VX客服号</font><font color="#66FFCC">【人工购买兑换码】</font>人工</a>
+
+  <a class="qnq" onclick="dhan()" href="index1.html">前往兑换证书：全能签/轻松签</a>
+<!--a class="cx" onclick="dhan()"href="https://www.youpm.fit/mobile/order/checkKami?noaux=1&id=8070">点击查询购买记录</font></a-->
+<a class="gw" href="index6.html"><font color="red">添加小白软件源</font></a>
+<a class="P12-dh" onclick="anjc()" href="https://afzs.yhios.cn/dzzsjc/index.html">安装视频教程</a>
+  <br><br>
+  </body>
+</html>
